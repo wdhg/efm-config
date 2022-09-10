@@ -8,10 +8,6 @@ tools:
     format-command: 'black --quiet -'
     format-stdin: true
 
-  prettier: &prettier
-    format-command: './node_modules/.bin/prettier'
-    format-stdin: true
-
   rustfmt: &rustfmt
     format-command: 'rustfmt'
     format-stdin: true
@@ -19,18 +15,6 @@ tools:
 languages:
   python:
     - <<: *python-black
-
-  javascript:
-    - <<: *prettier
-
-  javascriptreact:
-    - <<: *prettier
-
-  typescript:
-    - <<: *prettier
-
-  typescriptreact:
-    - <<: *prettier
 
   rust:
     - <<: *rustfmt
